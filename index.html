@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Prueba</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex h-screen bg-gray-100">
+
+  <!-- Menú lateral -->
+  <aside class="w-64 bg-white shadow-xl p-4">
+    <h1 class="text-2xl font-bold mb-6 text-blue-600">Mi Panel</h1>
+    <nav class="space-y-2">
+      <button onclick="mostrarContenido('inicio')" class="w-full text-left px-4 py-2 rounded hover:bg-blue-100">Inicio</button>
+      <button onclick="mostrarContenido('perfil')" class="w-full text-left px-4 py-2 rounded hover:bg-blue-100">Perfil</button>
+      <button onclick="mostrarContenido('ajustes')" class="w-full text-left px-4 py-2 rounded hover:bg-blue-100">Ajustes</button>
+    </nav>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="flex-1 p-8 overflow-auto">
+    <div id="contenido" class="bg-white rounded-xl p-6 shadow-md">
+      <h2 class="text-xl font-semibold mb-4">Bienvenido al panel</h2>
+      <p>Selecciona una opción del menú para ver el contenido.</p>
+    </div>
+  </main>
+
+  <!-- Script para cambiar contenido -->
+  <script>
+    function mostrarContenido(seccion) {
+      const contenido = document.getElementById('contenido');
+      if (seccion === 'inicio') {
+        contenido.innerHTML = `
+          <h2 class="text-xl font-semibold mb-4">Inicio</h2>
+          <p>Este es el panel de inicio. Aquí puedes ver estadísticas o accesos rápidos.</p>
+        `;
+      } else if (seccion === 'perfil') {
+        contenido.innerHTML = `
+          <h2 class="text-xl font-semibold mb-4">Perfil</h2>
+          <p>En esta sección puedes editar tu información personal.</p>
+        `;
+      } else if (seccion === 'ajustes') {
+        contenido.innerHTML = `
+          <h2 class="text-xl font-semibold mb-4">Ajustes</h2>
+          <p>Configura tus preferencias del sistema aquí.</p>
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>
