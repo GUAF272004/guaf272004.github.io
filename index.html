@@ -1,53 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Panel de Prueba</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio San Gabriel</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2ecc71;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .soporte {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .soporte h3 {
+            margin-top: 0;
+        }
+    </style>
 </head>
-<body class="flex h-screen bg-gray-100">
+<body>
 
-  <!-- Menú lateral -->
-  <aside class="w-64 bg-white shadow-xl p-4">
-    <h1 class="text-2xl font-bold mb-6 text-blue-600">Mi Panel</h1>
-    <nav class="space-y-2">
-      <button onclick="mostrarContenido('inicio')" class="w-full text-left px-4 py-2 rounded hover:bg-blue-100">Inicio</button>
-      <button onclick="mostrarContenido('perfil')" class="w-full text-left px-4 py-2 rounded hover:bg-blue-100">Perfil</button>
-      <button onclick="mostrarContenido('ajustes')" class="w-full text-left px-4 py-2 rounded hover:bg-blue-100">Ajustes</button>
+    <header>
+        <h1>Colegio San Gabriel</h1>
+        <p>Formando líderes con valores cristianos</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes-somos">¿Quiénes somos?</a>
+        <a href="#niveles">Niveles Educativos</a>
+        <a href="#valores">Valores</a>
+        <a href="#soporte">Soporte</a>
+        <a href="#contacto">Contacto</a>
     </nav>
-  </aside>
 
-  <!-- Contenido principal -->
-  <main class="flex-1 p-8 overflow-auto">
-    <div id="contenido" class="bg-white rounded-xl p-6 shadow-md">
-      <h2 class="text-xl font-semibold mb-4">Bienvenido al panel</h2>
-      <p>Selecciona una opción del menú para ver el contenido.</p>
+    <div class="container">
+        <section id="inicio">
+            <h2>Bienvenidos</h2>
+            <p>El Colegio San Gabriel es una institución educativa católica dedicada a la formación integral de los estudiantes, desde el nivel preescolar hasta bachillerato. Nuestro compromiso es educar con amor, disciplina y excelencia académica.</p>
+        </section>
+
+        <section id="quienes-somos">
+            <h2>¿Quiénes somos?</h2>
+            <p>Fundado en 1998 por la Congregación de Hermanas Gabrielinas, nuestro colegio se ha consolidado como una comunidad de fe, amor y aprendizaje. Nos enfocamos en el desarrollo académico, espiritual y social de nuestros estudiantes.</p>
+        </section>
+
+        <section id="niveles">
+            <h2>Niveles Educativos</h2>
+            <ul>
+                <li><strong>Preescolar:</strong> Educación inicial basada en el juego y los valores.</li>
+                <li><strong>Primaria:</strong> Formación sólida en ciencias, humanidades y valores cristianos.</li>
+                <li><strong>Secundaria:</strong> Preparación para la vida con una educación integral y vocacional.</li>
+                <li><strong>Bachillerato:</strong> Orientación universitaria y desarrollo de pensamiento crítico.</li>
+            </ul>
+        </section>
+
+        <section id="valores">
+            <h2>Nuestros Valores</h2>
+            <p>Nos guiamos por los principios del Evangelio, promoviendo los valores de:</p>
+            <ul>
+                <li>Fe</li>
+                <li>Respeto</li>
+                <li>Honestidad</li>
+                <li>Responsabilidad</li>
+                <li>Solidaridad</li>
+            </ul>
+        </section>
+
+        <section id="soporte" class="soporte">
+            <h3>Soporte</h3>
+            <p>Si tienes dudas o necesitas asistencia, puedes contactar con nuestro equipo de soporte en los siguientes canales:</p>
+            <ul>
+                <li>Correo: soporte@colegiosangabriel.edu</li>
+                <li>Teléfono: (555) 123-4567</li>
+                <li>Horario: Lunes a Viernes de 8:00 a.m. a 3:00 p.m.</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p><strong>Dirección:</strong> Av. de la Esperanza #123, Col. Fe y Alegría, Ciudad Esperanza.</p>
+            <p><strong>Correo:</strong> contacto@colegiosangabriel.edu</p>
+            <p><strong>Teléfono:</strong> (555) 987-6543</p>
+        </section>
     </div>
-  </main>
 
-  <!-- Script para cambiar contenido -->
-  <script>
-    function mostrarContenido(seccion) {
-      const contenido = document.getElementById('contenido');
-      if (seccion === 'inicio') {
-        contenido.innerHTML = `
-          <h2 class="text-xl font-semibold mb-4">Inicio</h2>
-          <p>Este es el panel de inicio. Aquí puedes ver estadísticas o accesos rápidos.</p>
-        `;
-      } else if (seccion === 'perfil') {
-        contenido.innerHTML = `
-          <h2 class="text-xl font-semibold mb-4">Perfil</h2>
-          <p>En esta sección puedes editar tu información personal.</p>
-        `;
-      } else if (seccion === 'ajustes') {
-        contenido.innerHTML = `
-          <h2 class="text-xl font-semibold mb-4">Ajustes</h2>
-          <p>Configura tus preferencias del sistema aquí.</p>
-        `;
-      }
-    }
-  </script>
+    <footer>
+        &copy; 2025 Colegio San Gabriel | Todos los derechos reservados.
+    </footer>
 
 </body>
 </html>
